@@ -21,3 +21,5 @@ catGen = () =>{
     image.src = "https://source.unsplash.com/200x125/?cat";
     div.appendChild(image);
 }
+
+//Third Challenge

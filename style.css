@@ -1,4 +1,4 @@
-.container-1,.container-2{
+.container-1,.container-2,.container-3{
     border: 1px solid black;
     text-align: center;
     width: 65%;
@@ -6,7 +6,7 @@
     padding: 10px;
 }
 
-.flex-container-1,.flex-container-2{
+.flex-container-1,.flex-container-2,.flex-container-3{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -27,4 +27,12 @@
 .flex-container-2 img{
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.7);
     margin: 10px;
+}
+
+.flex-container-3 img{
+    margin: 20px;
+}
+
+.flex-container-3 img:hover{
+    box-shadow: 0px 10px 50px rgba(37, 50, 233,1);
 }
