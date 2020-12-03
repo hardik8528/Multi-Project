@@ -1,3 +1,4 @@
+// First Challenge
 ageInDays = ()=>{
     let age = prompt("What Is Your Age :-");
     let AgeInDays = (age)* 365;
@@ -11,4 +12,12 @@ ageInDays = ()=>{
 
 reset = () =>{
     document.getElementById("ageInDays").remove();
+}
+
+//Second Challenge
+catGen = () =>{
+    let image = document.createElement("img");
+    let div = document.getElementById("cat");
+    image.src = "https://source.unsplash.com/200x125/?cat";
+    div.appendChild(image);
 }
