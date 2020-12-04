@@ -59,11 +59,11 @@ Winner = (HumanChoice,BotChoice) =>{
 
 Message = ([YourChoice,ComputerChoice]) =>{
     if (YourChoice == 0) {
-        return {"message":"You Lost","color":"red"};
+        return {"message":"You Lost!","color":"red"};
     }else if(YourChoice == 0.5){
         return {"message":"You Tied!","color":"yellow"};
     }else{
-        return {"message":"You Won","color":"green"};
+        return {"message":"You Won!","color":"green"};
     }
 }
 
@@ -79,10 +79,14 @@ rpsFinal = (HumanImageChoice,BotImageChoice,message)=>{
     document.getElementById("scissors").remove();
 
     HumanDiv = document.createElement("div");
-    // MessageDiv = document.createElement("div");
-    // BotDiv = document.createElement("div");
+    MessageDiv = document.createElement("div");
+    BotDiv = document.createElement("div");
 
-    HumanDiv.innerHTML = "<img src='" + image[HumanImageChoice] + "'>";
+    HumanDiv.innerHTML = "<img src='" + image[HumanImageChoice] + "' width='150px' height='150px' style='box-shadow: 0px 10px 50px rgba(37, 50, 233,1);'>";
+    MessageDiv.innerHTML = "<h1 style='color:" + message["color"] + "; font-size:60px; padding:30px;'>" + message["message"] + "</h1>";
+    BotDiv.innerHTML = "<img src='" + image[BotImageChoice] + "' width='150px' height='150px' style='box-shadow: 0px 10px 50px rgba(233, 38, 23,1);'>";
 
     document.getElementById("flex-container-3").appendChild(HumanDiv);
+    document.getElementById("flex-container-3").appendChild(MessageDiv);
+    document.getElementById("flex-container-3").appendChild(BotDiv);
 }
