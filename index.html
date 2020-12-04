@@ -15,10 +15,10 @@
         <h2>Challenge 1 :- Your Age In Days</h2>
         <div class="flex-container-1">
             <div>
-                <button class="btn btn-primary btn-lg" onclick="ageInDays()">Check</button>
+                <button class="btn btn-primary " onclick="ageInDays()">Check</button>
             </div>
             <div>
-                <button class="btn btn-danger btn-lg" onclick="reset()">Reset</button>
+                <button class="btn btn-danger " onclick="reset()">Reset</button>
             </div>
         </div>
         <div class="flex-container-1" id="flex-result-1">
@@ -27,7 +27,7 @@
     </div>
     <div class="container-2">
         <h2>Challenge 2:- Cat Generator</h2>
-        <button class="btn btn-success btn-lg" id="cat-button" onclick="catGen()">Generate</button>
+        <button class="btn btn-success " id="cat-button" onclick="catGen()">Generate</button>
         <div class="flex-container-2" id="cat">
 
         </div>
@@ -38,6 +38,25 @@
             <img src="./rock-paper-scissors/rock.png" alt="" width="150px" id="rock" height="150px" onclick="rpsFun(this)">
             <img src="./rock-paper-scissors/paper.png" alt="" width="150px" id="paper" height="150px" onclick="rpsFun(this)">
             <img src="./rock-paper-scissors/scissors.png" alt="" width="150px" id="scissors" height="150px" onclick="rpsFun(this)">
+        </div>
+    </div>
+
+    <div class="container-4">
+        <h2>Challenge 4:- Change The Color Of All Buttons</h2>
+        <div class="flex-container-4">
+            <form action="">
+                <select name="drop" id="drop" onchange="ColorChange(this)">
+                    <option value="random">Random</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="reset">Reset</option>
+                </select>
+            </form>
+
+            <button type="button" class="btn btn-primary">Wee!</button>
+            <button type="button" class="btn btn-danger">Yahoo!</button>
+            <button type="button" class="btn btn-warning">Google</button>
+            <button type="button" class="btn btn-success">Facebook</button>
         </div>
     </div>
     <script src="script.js"></script>
