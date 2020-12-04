@@ -6,7 +6,7 @@ ageInDays = () => {
     let TextAns = document.createTextNode("Your Age is " + AgeInDays + " in Days");
     h1.setAttribute("id", "ageInDays");
     h1.appendChild(TextAns);
-    console.log(h1);
+    // console.log(h1);
     document.getElementById("flex-result-1").appendChild(h1);
 }
 
@@ -96,7 +96,7 @@ let AllButton = document.getElementsByTagName("button");
 
 let ColorHistory = [];
 for (let i = 0; i < AllButton.length; i++) {
-    ColorHistory.push(AllButton[i].classList[1]);
+    ColorHistory.push(AllButton[i].classList[2]);
 }
 
 ColorChange = (ButtonColor) =>{
@@ -113,21 +113,21 @@ ColorChange = (ButtonColor) =>{
 
 ButtonRed = () =>{
     for (let i = 0; i < AllButton.length; i++) {
-        AllButton[i].classList.remove(AllButton[i].classList[1]);
+        AllButton[i].classList.remove(AllButton[i].classList[2]);
         AllButton[i].classList.add("btn-danger");
     }
 }
 
 ButtonGreen = () =>{
     for (let i = 0; i < AllButton.length; i++) {
-        AllButton[i].classList.remove(AllButton[i].classList[1]);
+        AllButton[i].classList.remove(AllButton[i].classList[2]);
         AllButton[i].classList.add("btn-success");
     }
 }
 
 ButtonReset = () =>{
     for (let i = 0; i < AllButton.length; i++) {
-        AllButton[i].classList.remove(AllButton[i].classList[1]);
+        AllButton[i].classList.remove(AllButton[i].classList[2]);
         AllButton[i].classList.add(ColorHistory[i]);
     }
 }
@@ -136,7 +136,7 @@ ButtonRandom = () =>{
     let Choice = ["btn-primary","btn-success","btn-warning","btn-danger"];
     for (let i = 0; i < AllButton.length; i++) {
         let Random = Math.floor(Math.random() *4)
-        AllButton[i].classList.remove(AllButton[i].classList[1]);
+        AllButton[i].classList.remove(AllButton[i].classList[2]);
         AllButton[i].classList.add(Choice[Random]);
     }
 }

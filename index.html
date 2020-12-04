@@ -15,10 +15,10 @@
         <h2>Challenge 1 :- Your Age In Days</h2>
         <div class="flex-container-1">
             <div>
-                <button class="btn btn-primary " onclick="ageInDays()">Check</button>
+                <button class="btn btn-lg btn-primary" onclick="ageInDays()">Check</button>
             </div>
             <div>
-                <button class="btn btn-danger " onclick="reset()">Reset</button>
+                <button class="btn btn-lg btn-danger" onclick="reset()">Reset</button>
             </div>
         </div>
         <div class="flex-container-1" id="flex-result-1">
@@ -27,7 +27,7 @@
     </div>
     <div class="container-2">
         <h2>Challenge 2:- Cat Generator</h2>
-        <button class="btn btn-success " id="cat-button" onclick="catGen()">Generate</button>
+        <button class="btn btn-lg btn-success" id="cat-button" onclick="catGen()">Generate</button>
         <div class="flex-container-2" id="cat">
 
         </div>
@@ -35,9 +35,12 @@
     <div class="container-3">
         <h2>Challenge 3:- Rock,Paper And Scissors</h2>
         <div class="flex-container-3" id="flex-container-3">
-            <img src="./rock-paper-scissors/rock.png" alt="" width="150px" id="rock" height="150px" onclick="rpsFun(this)">
-            <img src="./rock-paper-scissors/paper.png" alt="" width="150px" id="paper" height="150px" onclick="rpsFun(this)">
-            <img src="./rock-paper-scissors/scissors.png" alt="" width="150px" id="scissors" height="150px" onclick="rpsFun(this)">
+            <img src="./rock-paper-scissors/rock.png" alt="" width="150px" id="rock" height="150px"
+                onclick="rpsFun(this)">
+            <img src="./rock-paper-scissors/paper.png" alt="" width="150px" id="paper" height="150px"
+                onclick="rpsFun(this)">
+            <img src="./rock-paper-scissors/scissors.png" alt="" width="150px" id="scissors" height="150px"
+                onclick="rpsFun(this)">
         </div>
     </div>
 
@@ -53,10 +56,49 @@
                 </select>
             </form>
 
-            <button type="button" class="btn btn-primary">Wee!</button>
-            <button type="button" class="btn btn-danger">Yahoo!</button>
-            <button type="button" class="btn btn-warning">Google</button>
-            <button type="button" class="btn btn-success">Facebook</button>
+            <button type="button" class="btn btn-lg btn-primary ">Wee!</button>
+            <button type="button" class="btn btn-lg btn-danger ">Yahoo!</button>
+            <button type="button" class="btn btn-lg btn-warning ">Google</button>
+            <button type="button" class="btn btn-lg btn-success ">Facebook</button>
+        </div>
+    </div>
+
+    <div class="container-5">
+        <h2>Challenge 5:- BlackJack</h2>
+        <h3><span>Let's Play</span></h3>
+
+        <div class="flex-row-1">
+            <div id="Your-Box">
+                <h2>You: <span id="Your-Result">0</span></h2>
+            </div>
+
+            <div id="Dealer-Box">
+                <h2>Dealer: <span id="Dealer-Result">0</span></h2>
+            </div>
+        </div>
+
+        <div class="flex-row-2">
+            <div>
+                <button type="button" class="btn btn-lg btn-primary" id="hit">Hit</button>
+                <button type="button" class="btn btn-lg btn-warning" id="stand">Stand</button>
+                <button type="button" class="btn btn-lg btn-danger" id="deal">Deal</button>
+            </div>
+        </div>
+
+        <div class="flex-row-3">
+            <table>
+                <tr>
+                    <th>Wins</th>
+                    <th>Losses</th>
+                    <th>Draws</th>
+                </tr>
+
+                <tr>
+                    <td><span id="wins">0</span></td>
+                    <td><span id="losses">0</span></td>
+                    <td><span id="draws">0</span></td>
+                </tr>
+            </table>
         </div>
     </div>
     <script src="script.js"></script>
