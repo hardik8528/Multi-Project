@@ -1,70 +1,82 @@
-.container-1,.container-2,.container-3,.container-4,.container-5{
-    border: 1px solid black;
-    text-align: center;
-    width: 65%;
-    margin: 0 auto;
-    padding: 10px;
+.container-1,
+.container-2,
+.container-3,
+.container-4,
+.container-5 {
+  border: 1px solid black;
+  text-align: center;
+  width: 65%;
+  margin: 0 auto;
+  padding: 10px;
 }
 
-.flex-container-1,.flex-container-2,.flex-container-3,.flex-container-4,.flex-row-1,.flex-row-2,.flex-row-3{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 10px;
-    align-items: center;
-    /* border: 1px solid black; */
+.flex-container-1,
+.flex-container-2,
+.flex-container-3,
+.flex-container-4,
+.flex-row-1,
+.flex-row-2,
+.flex-row-3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 10px;
+  align-items: center;
+  /* border: 1px solid black; */
 }
 
-.flex-container-1 div{
-    /* border: 1px solid black; */
-    padding: 10px;
+.flex-container-1 div {
+  /* border: 1px solid black; */
+  padding: 10px;
 }
 
-#cat-button{
-    margin-top: 15px;
+#cat-button {
+  margin-top: 15px;
 }
 
-.flex-container-2 img{
-    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.7);
-    margin: 10px;
+.flex-container-2 img {
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.7);
+  margin: 10px;
 }
 
-.flex-container-3 img{
-    margin: 20px;
+.flex-container-3 img {
+  margin: 20px;
 }
 
-.flex-container-3 img:hover{
-    box-shadow: 0px 10px 50px rgba(37, 50, 233,1);
+.flex-container-3 img:hover {
+  box-shadow: 0px 10px 50px rgba(37, 50, 233, 1);
 }
 
-.flex-row-1{
-    background-color: chartreuse;
-    border: 1px solid black;
-    color: white;
+.flex-row-1 {
+  background-image: url("./BlackJack/2.jpg");
+  background-position: center;
+  background-size: cover;
+  border: 1px solid black;
+  color: white;
 }
 
-.flex-row-1 div{
-    height: 350px;
-    border: 1px solid black;
-    flex: 1;
-    padding: 10px;
+.flex-row-1 div {
+  height: 350px;
+  border: 1px solid black;
+  flex: 1;
+  padding: 10px;
 }
 
-.flex-row-2{
-    background-color: chartreuse;
-    border: 1px solid black;
+.flex-row-2 {
+  background-color: #052939;
+  border: 1px solid black;
 }
 
-.flex-row-2 button{
-    margin-right: 5px;
+.flex-row-2 button {
+  margin-right: 5px;
 }
 
-.flex-row-2 div{
-    padding: 10px;
-    border: 1px solid black;
+.flex-row-2 div {
+  padding: 10px;
+  border: 1px solid black;
 }
 
-table,th,td{
-    border: 1px solid black;
-    padding: 5px;
+table, th, td{
+  padding: 5px;
+  border: 2px solid black;
 }
