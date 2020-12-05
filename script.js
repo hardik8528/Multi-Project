@@ -99,44 +99,108 @@ for (let i = 0; i < AllButton.length; i++) {
     ColorHistory.push(AllButton[i].classList[2]);
 }
 
-ColorChange = (ButtonColor) =>{
+ColorChange = (ButtonColor) => {
     if (ButtonColor.value == "red") {
         ButtonRed();
-    }else if(ButtonColor.value == "green"){
+    } else if (ButtonColor.value == "green") {
         ButtonGreen();
-    }else if(ButtonColor.value == "random"){
+    } else if (ButtonColor.value == "random") {
         ButtonRandom();
-    }else{
+    } else {
         ButtonReset();
     }
 }
 
-ButtonRed = () =>{
+ButtonRed = () => {
     for (let i = 0; i < AllButton.length; i++) {
         AllButton[i].classList.remove(AllButton[i].classList[2]);
         AllButton[i].classList.add("btn-danger");
     }
 }
 
-ButtonGreen = () =>{
+ButtonGreen = () => {
     for (let i = 0; i < AllButton.length; i++) {
         AllButton[i].classList.remove(AllButton[i].classList[2]);
         AllButton[i].classList.add("btn-success");
     }
 }
 
-ButtonReset = () =>{
+ButtonReset = () => {
     for (let i = 0; i < AllButton.length; i++) {
         AllButton[i].classList.remove(AllButton[i].classList[2]);
         AllButton[i].classList.add(ColorHistory[i]);
     }
 }
 
-ButtonRandom = () =>{
-    let Choice = ["btn-primary","btn-success","btn-warning","btn-danger"];
+ButtonRandom = () => {
+    let Choice = ["btn-primary", "btn-success", "btn-warning", "btn-danger"];
     for (let i = 0; i < AllButton.length; i++) {
-        let Random = Math.floor(Math.random() *4)
+        let Random = Math.floor(Math.random() * 4)
         AllButton[i].classList.remove(AllButton[i].classList[2]);
         AllButton[i].classList.add(Choice[Random]);
     }
+}
+
+//Fifth Challenge
+
+let data = {
+    "you": { "ScoreSpan": "#Your-Result", "div": "#Your-Box", "Score": 0 },
+    "dealer": { "ScoreSpan": "#Dealer-Result", "div": "#Dealer-Box", "Score": 0 },
+    "cards": ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'A', 'J', 'K', 'Q'],
+    "cardValue": { "2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8, "9": 9, "10": 10, "J": 10, "K": 10, "Q": 10, "A": [1, 11] },
+}
+
+const YOU = data["you"];
+const DEALER = data["dealer"];
+
+let swish = new Audio("./BlackJack/sound/swish.m4a");
+
+document.querySelector("#hit").addEventListener("click", blackjackHit);
+
+document.querySelector("#deal").addEventListener("click", blackjackDeal);
+
+function blackjackHit() {
+    let card = randomCard();
+    Show(card, YOU);
+    updateScore(card, YOU);
+}
+
+function randomCard() {
+    let random = Math.floor(Math.random() * 13);
+    return data['cards'][random];
+}
+
+function Show(card, activePlayer) {
+    let SendImage = document.createElement("img");
+    SendImage.src = `./BlackJack/images/${card}.png`;
+    document.querySelector(activePlayer['div']).appendChild(SendImage);
+    swish.play();
+}
+
+function blackjackDeal() {
+    let yourImage = document.querySelector("#Your-Box").querySelectorAll('img');
+
+    let dealerImage = document.querySelector("#Dealer-Box").querySelectorAll('img');
+
+    for (let i = 0; i < yourImage.length; i++) {
+        yourImage[i].remove();
+    }
+
+    for (let i = 0; i < dealerImage.length; i++) {
+        dealerImage[i].remove();
+    }
+}
+
+function updateScore(card, activePlayer) {
+    if (card == 'A') {
+        if (activePlayer['Score'] + data['cardValue'][card][1] <= 21) {
+            activePlayer['Score'] += data['cardValue'][card][1];
+        }else{
+            activePlayer['Score'] += data['cardValue'][card][0];
+        }
+    }else{
+        activePlayer['Score'] += data['cardValue'][card];
+    }
+
+    document.querySelector(activePlayer['ScoreSpan']).textContent = activePlayer['Score'];
 }

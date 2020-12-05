@@ -5,7 +5,7 @@
 .container-5 {
   border: 1px solid black;
   text-align: center;
-  width: 65%;
+  width: 75%;
   margin: 0 auto;
   padding: 10px;
 }
@@ -52,11 +52,13 @@
   background-position: center;
   background-size: cover;
   border: 1px solid black;
-  color: white;
+  color: #FFFF;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .flex-row-1 div {
-  height: 350px;
+  height: 420px;
   border: 1px solid black;
   flex: 1;
   padding: 10px;
@@ -79,4 +81,8 @@
 table, th, td{
   padding: 5px;
   border: 2px solid black;
+}
+
+#Dealer-Box img,#Your-Box img{
+  margin:5px
 }
